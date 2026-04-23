@@ -1,0 +1,110 @@
+:root {
+    color-scheme: light;
+    --paper: #f4eddb;
+    --paper-shadow: #eadfc7;
+    --ink: #4a3423;
+    --ink-soft: rgba(74, 52, 35, 0.72);
+    --line: rgba(74, 52, 35, 0.18);
+    --card: rgba(255, 252, 245, 0.72);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.45), transparent 32%),
+        var(--paper);
+    color: var(--ink);
+}
+
+.page {
+    width: min(920px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0 4rem;
+}
+
+.page--narrow {
+    width: min(760px, calc(100% - 2rem));
+}
+
+.hero {
+    margin-bottom: 2rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.lead,
+.prose p,
+.card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+}
+
+.prose p {
+    margin: 0;
+}
+
+.prose p + p {
+    margin-top: 1rem;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: block;
+    padding: 1.15rem 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--card);
+    box-shadow: 0 8px 24px rgba(74, 52, 35, 0.05);
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    border-color: rgba(74, 52, 35, 0.28);
+}
+
+.prose {
+    padding: 1.15rem 1.2rem;
+}
+
+.back-link {
+    margin-top: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--ink);
+}
